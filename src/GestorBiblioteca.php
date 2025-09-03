@@ -14,11 +14,6 @@ class GestorBiblioteca
     public function gestionarAgregarLibro(Libro $libro)
     {
         Libro::agregarLibro($libro);
-        // if (Libro::agregarLibro($libro)) {
-        //     echo "* {$libro->getTitulo()} <br>";
-        // } else {
-        //     echo "Error: No se pudo agregar el libro '{$libro->getTitulo()}'.<br>";
-        // }
     }
 
     public function gestionarEditarLibro($isbn, $nuevosDatos)
@@ -48,7 +43,6 @@ class GestorBiblioteca
     public function agregarAutor(Autor $autor)
     {
         $this->autores[$autor->getIdAutor()] = $autor;
-        //echo "* {$autor->getNombre()} {$autor->getApellido()}<br>";
     }
 
     public function buscarAutor($criterio)
@@ -66,21 +60,18 @@ class GestorBiblioteca
     public function agregarCategoria(Categoria $categoria)
     {
         $this->categorias[$categoria->getIdCategoria()] = $categoria;
-        //echo "* {$categoria->getNombre()}<br>";
     }
 
     // Métodos para la gestión de Editoriales
     public function agregarEditorial(Editorial $editorial)
     {
         $this->editoriales[$editorial->getIdEditorial()] = $editorial;
-        //echo "* {$editorial->getNombre()}<br>";
     }
 
     // Métodos para la gestión de Ejemplares
     public function agregarEjemplar(Ejemplar $ejemplar)
     {
         $this->ejemplares[$ejemplar->getIdEjemplar()] = $ejemplar;
-        //echo "Código: '{$ejemplar->getIdEjemplar()}' del libro '{$ejemplar->libro->getTitulo()}'.<br>";
     }
 
     public function getEjemplar($idEjemplar)

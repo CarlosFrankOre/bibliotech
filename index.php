@@ -4,8 +4,7 @@ require_once "vendor/autoload.php";
 // Instanciar el gestor
 $gestor = new GestorBiblioteca();
 
-// 1. Agregar autores (5)
-//echo "<h3>AUTORES</h3>";
+// 1. Agregar autores
 $autor1 = new Autor(1, 'Gabriel', 'García Márquez', 'Novelista colombiano.', '1927-03-06');
 $autor2 = new Autor(2, 'George', 'Orwell', 'Escritor y periodista británico.', '1903-06-25');
 $autor3 = new Autor(3, 'J.K.', 'Rowling', 'Escritora británica, autora de la saga Harry Potter.', '1965-07-31');
@@ -18,8 +17,7 @@ $gestor->agregarAutor($autor3);
 $gestor->agregarAutor($autor4);
 $gestor->agregarAutor($autor5);
 
-// 2. Agregar categorías (3)
-//echo "<h3>CATEGORÍAS</h3>";
+// 2. Agregar categorías
 $categoria1 = new Categoria(101, 'Ficción', 'Libros de ficción y fantasía.');
 $categoria2 = new Categoria(102, 'Ciencia Ficción', 'Libros que exploran la tecnología y el futuro.');
 $categoria3 = new Categoria(103, 'Terror', 'Libros diseñados para provocar miedo.');
@@ -28,8 +26,7 @@ $gestor->agregarCategoria($categoria1);
 $gestor->agregarCategoria($categoria2);
 $gestor->agregarCategoria($categoria3);
 
-// 3. Agregar editoriales (3)
-//echo "<h3>EDITORIALES</h3>";
+// 3. Agregar editoriales
 $editorial1 = new Editorial(201, 'Editorial Sudamericana', 'Buenos Aires', '555-1234');
 $editorial2 = new Editorial(202, 'Salamandra', 'Barcelona', '555-5678');
 $editorial3 = new Editorial(203, 'Penguin Random House', 'Ciudad de México', '555-9012');
@@ -38,8 +35,7 @@ $gestor->agregarEditorial($editorial1);
 $gestor->agregarEditorial($editorial2);
 $gestor->agregarEditorial($editorial3);
 
-// 4. Agregar libros (5)
-//echo "<h3>LIBROS</h3>";
+// 4. Agregar libros
 $libro1 = new Libro('978-0307474448', 'Cien Años de Soledad', 1967, 'Una obra maestra de la literatura latinoamericana.', $editorial1, $categoria1, [$autor1]);
 $libro2 = new Libro('978-0451524935', '1984', 1949, 'Novela distópica.', $editorial3, $categoria2, [$autor2]);
 $libro3 = new Libro('978-0747532699', 'Harry Potter y la piedra filosofal', 1997, 'El inicio de la famosa saga de fantasía.', $editorial2, $categoria1, [$autor3]);
@@ -53,8 +49,7 @@ $gestor->gestionarAgregarLibro($libro3);
 $gestor->gestionarAgregarLibro($libro4);
 $gestor->gestionarAgregarLibro($libro5);
 
-// 5. Agregar ejemplares a cada libro (2 o 3 ejemplares por libro)
-//echo "<h3>EJEMPLARES</h3>";
+// 5. Agregar ejemplares a cada libro
 $gestor->agregarEjemplar(new Ejemplar(501, $libro1, 'disponible'));
 $gestor->agregarEjemplar(new Ejemplar(502, $libro1, 'disponible'));
 $gestor->agregarEjemplar(new Ejemplar(503, $libro1, 'disponible'));
@@ -85,11 +80,9 @@ $gestor->agregarEjemplar(new Ejemplar(510, $libro5, 'disponible'));
 <body class="bg-gray-900 text-gray-200 min-h-screen">
 <div class="container mx-auto p-6 lg:p-12">
 
-    <!-- Título principal y espacio para imagen -->
     <div class="flex flex-col items-center mb-12">
         <h1 class="text-5xl font-bold text-blue-300 text-center mb-4">Sistema de Gestión de Biblioteca</h1>
         <div class="w-48 h-32 bg-white rounded-lg flex items-center justify-center mb-6 overflow-hidden">
-            <!-- Aquí puedes poner una imagen de libros -->
             <img 
                 src="https://res.cloudinary.com/ddl6vwk0i/image/upload/v1756870095/libro_gif8af.jpg" 
                 alt="Imagen de libros" 

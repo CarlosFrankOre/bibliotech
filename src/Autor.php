@@ -6,7 +6,6 @@
     private $apellido;
     private $biografia;
     private $fechaNacimiento;
-    // private $libros = [];
 
     public function __construct($idAutor, $nombre, $apellido, $biografia, $fechaNacimiento) {
         $this->idAutor = $idAutor;

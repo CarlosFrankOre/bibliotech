@@ -7,7 +7,6 @@ class Editorial
     private $nombre;
     private $direccion;
     private $telefono;
-    //private $libros = [];
 
     public function __construct($idEditorial, $nombre, $direccion, $telefono)
     {
